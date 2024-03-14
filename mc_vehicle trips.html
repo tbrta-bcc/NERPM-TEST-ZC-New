@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NERPM 4-Step Model</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!--chart.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+   <script src="src/leaflet.label.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0-rc"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
+
+  <!--map-->
+  	<link rel="stylesheet" href="leaflet/leaflet.css">
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<link rel="stylesheet" href="leaflet/leaflet.css"/>
+	<script src="leaflet/leaflet.js"></script> 
+	<script src="js/l.control.geosearch.js"></script>
+	<script src="js/l.geosearch.provider.google.js"></script>
+    <link rel="stylesheet" href="css/l.geosearch.css"/>
+        <script src="src/leaflet.label.js"></script>
+   <script src="src/leaflet.label.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+
+    </div>
+  </section>
+
+    <!-- ======= Header ======= should be used for every html-->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+            <h1 class="logo me-auto"><a href="home.html">NERPM 4-Step Model Year 2015
+  </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="home.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="home.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="#services">Download</a></li>
+          <li><a class="nav-link scrollto" href="https://sites.google.com/view/nerpm" target="_blank">User Guide</a></li>
+          <li class="dropdown"><a href="#"><span>Model Result</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="ee.html"><span>External</span> </a>
+
+              </li>
+              <li class="dropdown"><a href="generation.html"><span>Trip Generation</span> </a>
+ 
+              </li>
+			   <li class="dropdown"><a href="trip length.html"><span>Trip Distribution</span> </a>
+
+              </li>
+			   <li class="dropdown"><a href="#"><span>Mode Choice</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+               
+                  <li><a href="mc_person trips.html">Person Trips</a></li>
+				  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+                </ul>
+              </li>
+			  	   <li class="dropdown"><a href="transit summary.html"><span>Transit Summary</span> </a>
+
+              </li>
+			   <li class="dropdown"><a href="#"><span>Highway Analysis </span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="HWY analysis.html">Volume over Capacity</a></li>
+				  <li><a href="HWY analysis_Subarea.html">Volume over Capacity Subarea</a></li>
+                </ul>
+              </li> 			  <li class="dropdown"><a href="#"><span>Highway Validation</span> <i class="bi bi-chevron-right"></i></a>                <ul>
+                  <li><a href="RMSE Report.html">RMSE</a></li>
+                  <li><a href="HWY validation vc.html">Volume/Count</a></li>
+				  <li><a href="HWY validation vc Subarea.html">Volume/Count Subarea</a></li>
+                </ul>
+              </li>
+
+                          </ul>
+          </li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header should be used for every html-->
+
+        <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-right">
+          <h4>Model Result</h4>
+          <ol>
+            <li><a href="ee.html">External</a></li>
+  <li><a href="generation.html">Generation</a></li>
+  <li><a href="trip length.html">Distribution</a></li>
+  <li><a href="mc_person trips.html">Person Trips</a></li>
+  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+  <li><a href="transit summary.html">Transit Summary</a></li>
+  <li><a href="HWY analysis.html">Volume/Capacity</a></li>
+  	    <li><a href="HWY analysis_Subarea.html">Volume/Capacity Subarea</a></li>
+
+  
+	    <li><a href="RMSE Report.html">RMSE</a></li>
+
+    <li><a href="HWY validation vc.html">Volume/Count</a></li>
+
+
+    <li><a href="HWY validation vc Subarea.html">Volume/Count Subarea</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs --><style>
+     
+    thead {color: black;}
+    tbody {color: black;}
+    tfoot {color: red;}
+
+    table, th, td {
+      border: 1px solid black;
+      text-align:center;
+      font-size: 12px;
+      height:30px;
+      border-collapse: collapse;
+    width: 600px;
+    }
+    
+ td{
+          text-align:right;
+
+    }
+        td:nth-child(1) {
+          text-align:center;
+}
+        td:nth-child(10) {
+          text-align:center;
+}
+
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      * {
+  box-sizing: border-box;
+}
+
+.box {
+  position:absolute;
+  top:55px;
+  width: 45;
+  height:100%;
+}
+.box_1 {
+  position:absolute;
+  top:630px;
+  left:40px;
+  width: 580px;
+  height:30;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+
+  <main id="main">
+
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Vehicle Trips Mode Share by County</h2>
+          <p></p>
+        </div>
+
+		   <div class="row">
+ <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" id="auto" >
+
+	<table style ="width:150%">
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>County</th>
+      <th>Drive Alone</th>
+      <th>Share Ride 2</th>
+      <th>Share Ride 3+</th>
+      <th>Truck</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nassau</td>
+      <td>93,061</td>
+      <td>32,173</td>
+      <td>15,209</td>
+      <td>19,031</td>
+      <td>159,475</td>
+    </tr>
+    <tr>
+      <td>Duval</td>
+      <td>1,295,735</td>
+      <td>424,620</td>
+      <td>166,983</td>
+      <td>291,508</td>
+      <td>2,178,847</td>
+    </tr>
+    <tr>
+      <td>St. Johns</td>
+      <td>239,290</td>
+      <td>80,158</td>
+      <td>36,325</td>
+      <td>45,720</td>
+      <td>401,494</td>
+    </tr>
+    <tr>
+      <td>Clay</td>
+      <td>188,089</td>
+      <td>60,633</td>
+      <td>26,773</td>
+      <td>34,260</td>
+      <td>309,756</td>
+    </tr>
+    <tr>
+      <td>Baker</td>
+      <td>26,013</td>
+      <td>8,745</td>
+      <td>4,758</td>
+      <td>5,409</td>
+      <td>44,926</td>
+    </tr>
+    <tr>
+      <td>Putnam</td>
+      <td>71,295</td>
+      <td>25,196</td>
+      <td>10,550</td>
+      <td>15,665</td>
+      <td>122,707</td>
+    </tr>
+    <tr>
+      <td>External</td>
+      <td>62,527</td>
+      <td>27,824</td>
+      <td>15,481</td>
+      <td>17,179</td>
+      <td>123,012</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>1,976,012</td>
+      <td>659,350</td>
+      <td>276,082</td>
+      <td>428,774</td>
+      <td>3,340,219</td>
+    </tr>
+  </tbody>
+</table></div>
+										   
+<div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-1 content" id="barchart_PANDAS" style="width:600px">
+      <h4 style="padding: 5px 0;color:black;font-size:20"><span>
+    </span></h4>
+	     <h4 style="padding: 5px 0;color:black;font-size:20"><span>
+    </span></h4>
+    <canvas id="stackedbar_county" ></canvas>
+    </div> 
+
+    <script>
+
+var xValues =['58.35','59.47','59.6','60.72','57.9','58.1'];
+var yValues=['20.17','19.49','19.97','19.57','19.47','20.53'];
+var zValues=['9.54','7.66','9.05','8.64','10.59','8.6'];
+var mValues=['11.93','13.38','11.39','11.06','12.04','12.77'];
+
+new Chart(document.getElementById("stackedbar_county"), {
+    type: 'bar',
+    plugins: [ChartDataLabels],
+    data: {
+      labels: ["Nassau", "Duval", "St. Johns","Clay","Baker","Putnam"],
+      datasets: [
+        {
+          label: "Drive Alone",
+          backgroundColor: "#92B6C7",
+          data: xValues
+        }, 
+        {
+          label: "Shared Ride 2",
+          backgroundColor: "#F3A27C",
+          data: yValues
+        }, 
+        {
+          label: "Share Ride 3+",
+          backgroundColor: "#D37995",
+          data: zValues
+        }, 
+        {
+          label: "Truck",
+          backgroundColor: "#6CBE7C",
+          data: mValues
+        }
+      ]
+    },
+    options: {
+      responsive: true,      
+      scales: {
+      x: {
+	
+								  
+        stacked: true,		  
+				   
+      },
+      y: {
+            stacked: true,
+            min: 0,
+            max: 100,
+        }
+    },
+      plugins: {
+        legend:{
+          display:true,
+          position:"bottom",
+          labels:{
+            font:{
+              size:10
+            }
+          }
+
+        },  
+        datalabels: {
+          formatter: function(value) {
+            if(value >= 0){
+            return value + '%';}else{
+              value = "";
+              return value;
+            }
+          },
+          anchor: 'center',
+          align: 'center',
+          labels: {
+            value: {
+              font:{size:10}
+        
+            }
+          }
+        }
+      }
+    }
+});
+ 
+ </script>
+ </section>
+
+<!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Highway Vehicle Auto Occupancy</h2>
+          <p></p>
+        </div>
+                         <div> <li><a href="#">Note: SOV: Drive Alone; HOV2: Share Ride 2; HOV3+: Share Ride 3+; Walk: Walk to Bus, PNR: Park and Ride, KNR: Kiss and Ride</a></li> </div>
+
+		   <div class="row">
+ <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" id="auto" >
+
+	<table style ="width:150%">
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>County</th>
+      <th>SOV Person Trips</th>
+      <th>HOV2 Person Trips</th>
+      <th>HOV3 Person Trips</th>
+      <th>SOV Vehicle Trips</th>
+      <th>HOV2 Vehicle Trips</th>
+      <th>HOV3 Vehicle Trips</th>
+      <th>Total Person Trips</th>
+      <th>Total Vehicle Trips</th>
+      <th>Auto Occupancy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nassau</td>
+      <td>91,371</td>
+      <td>62,962</td>
+      <td>51,869</td>
+      <td>91,371</td>
+      <td>31,463</td>
+      <td>14,815</td>
+      <td>206,202</td>
+      <td>137,809</td>
+      <td>1.50</td>
+    </tr>
+    <tr>
+      <td>Duval</td>
+      <td>1,274,129</td>
+      <td>826,702</td>
+      <td>562,221</td>
+      <td>1,274,129</td>
+      <td>413,065</td>
+      <td>160,554</td>
+      <td>2,663,052</td>
+      <td>1,844,097</td>
+      <td>1.44</td>
+    </tr>
+    <tr>
+      <td>St. Johns</td>
+      <td>233,469</td>
+      <td>155,875</td>
+      <td>122,873</td>
+      <td>233,469</td>
+      <td>78,047</td>
+      <td>35,150</td>
+      <td>512,217</td>
+      <td>347,982</td>
+      <td>1.47</td>
+    </tr>
+    <tr>
+      <td>Clay</td>
+      <td>182,397</td>
+      <td>117,591</td>
+      <td>90,272</td>
+      <td>182,397</td>
+      <td>59,033</td>
+      <td>25,883</td>
+      <td>390,260</td>
+      <td>269,368</td>
+      <td>1.45</td>
+    </tr>
+    <tr>
+      <td>Baker</td>
+      <td>25,490</td>
+      <td>17,057</td>
+      <td>16,220</td>
+      <td>25,490</td>
+      <td>8,533</td>
+      <td>4,640</td>
+      <td>58,767</td>
+      <td>38,711</td>
+      <td>1.52</td>
+    </tr>
+    <tr>
+      <td>Putnam</td>
+      <td>69,507</td>
+      <td>48,893</td>
+      <td>35,360</td>
+      <td>69,507</td>
+      <td>24,463</td>
+      <td>10,142</td>
+      <td>153,760</td>
+      <td>104,184</td>
+      <td>1.48</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>1,876,363</td>
+      <td>1,229,080</td>
+      <td>878,815</td>
+      <td>1,876,363</td>
+      <td>614,604</td>
+      <td>251,184</td>
+      <td>3,984,258</td>
+      <td>2,742,151</td>
+      <td>1.45</td>
+    </tr>
+  </tbody>
+</table></div>
+  					   
+<div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-1 content" id="barchart_PANDAS" style="width:600px">
+
+      <h4 style="padding: 5px 0;color:black;font-size:20"><span>
+    </span></h4>
+				
+    <canvas id="bar-chart2" ></canvas>
+    </div> 
+
+    <script>
+
+var all2_sovp = ['91371','1274129','233469','182397','25490','69507'];
+var all2_hov2p=['62962','826702','155875','117591','17057','48893'];
+var all2_sov3p=['51869','562221','122873','90272','16220','35360'];
+var all2_sovv=['91371','1274129','233469','182397','25490','69507'];
+var all2_hov2v=['31463','413065','78047','59033','8533','24463'];
+var all2_hov3v=['14815','160554','35150','25883','4640','10142'];
+
+new Chart(document.getElementById("bar-chart2"), {
+    type: 'bar',
+    data: {
+      labels: ["Nassau", "Duval", "St. Johns","Clay","Baker","Putnam"],
+      datasets: [
+        {
+          label: "SOV Person",
+          backgroundColor: "#6C8D9C",
+          data: all2_sovp
+        }, {
+          label: "HOV2 Person",
+          backgroundColor: "#f3a27c",
+          data: all2_hov2p
+        }, {
+          label: "HOV3 Person",
+          backgroundColor: "#d37995",
+          data: all2_sov3p
+        }, {
+          label: "SOV Vehicle",
+          backgroundColor: "#92B6C7",
+          data: all2_sovv
+        }, {
+          label: "HOV2 Vehicle",
+          backgroundColor: "#eebea8",
+          data: all2_hov2v
+        }, {
+          label: "HOV3 Vehicle",
+          backgroundColor: "#e8c3cf",
+          data: all2_hov3v
+        }
+      ]
+    },
+    options: {
+      scales:{
+        x: {
+            ticks: {
+                font: {
+                    size: 10,
+                }
+            }
+        },
+        y: {
+            ticks: {
+                font: {
+                    size: 10,
+                }
+            }
+        }
+      },
+      plugins:{
+        legend:{
+           position:"right",
+          display:true,
+          labels:{
+            font:{
+              size:8
+            }
+          }
+
+        }
+      }
+    }
+});
+
+
+ </script>
+ 
+</div>
+
+</div>
+</div>
+   
+  </main><!-- End #main -->
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NERPM 4-Step Model</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!--chart.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+   <script src="src/leaflet.label.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0-rc"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
+
+  <!--map-->
+  	<link rel="stylesheet" href="leaflet/leaflet.css">
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<link rel="stylesheet" href="leaflet/leaflet.css"/>
+	<script src="leaflet/leaflet.js"></script> 
+	<script src="js/l.control.geosearch.js"></script>
+	<script src="js/l.geosearch.provider.google.js"></script>
+    <link rel="stylesheet" href="css/l.geosearch.css"/>
+        <script src="src/leaflet.label.js"></script>
+   <script src="src/leaflet.label.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+
+    </div>
+  </section>
+
+    <!-- ======= Header ======= should be used for every html-->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+            <h1 class="logo me-auto"><a href="home.html">NERPM 4-Step Model Year 2015
+  </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="home.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="home.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="https://sites.google.com/view/nerpm/model-package-download "target=“_blank">Download</a></li>
+          <li><a class="nav-link scrollto" href="https://sites.google.com/view/nerpm" target="_blank">User Guide</a></li>
+          <li class="dropdown"><a href="#"><span>Model Result</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="ee.html"><span>External</span> </a>
+
+              </li>
+              <li class="dropdown"><a href="generation.html"><span>Trip Generation</span> </a>
+ 
+              </li>
+			   <li class="dropdown"><a href="trip length.html"><span>Trip Distribution</span> </a>
+
+              </li>
+			   <li class="dropdown"><a href="#"><span>Mode Choice</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+               
+                  <li><a href="mc_person trips.html">Person Trips</a></li>
+				  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+                </ul>
+              </li>
+			  	   <li class="dropdown"><a href="transit summary.html"><span>Transit Summary</span> </a>
+
+              </li>
+
+
+<li class="dropdown"><a href="#"><span>Highway Analysis </span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="HWY analysis.html">Volume/Capacity</a></li>
+				  <li><a href="HWY analysis_Subarea.html">Volume/Capacity Subarea</a></li>
+                </ul>
+              </li> 			  <li class="dropdown"><a href="#"><span>Highway Validation</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="RMSE Report.html">RMSE</a></li>
+                  <li><a href="HWY validation vc.html">Volume/Count </a></li>
+				  <li><a href="HWY validation vc Subarea.html">Volume/Count  Subarea</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header should be used for every html-->
+
+        <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-right">
+          <h4>Model Result</h4>
+          <ol>
+            <li><a href="ee.html">External</a></li>
+  <li><a href="generation.html">Generation</a></li>
+  <li><a href="trip length.html">Distribution</a></li>
+  <li><a href="mc_person trips.html">Person Trips</a></li>
+  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+  <li><a href="transit summary.html">Transit Summary</a></li>
+  
+<li><a href="HWY analysis.html">Volume/Capacity</a></li>
+	    <li><a href="HWY analysis_Subarea.html">Volume/Capacity Subarea</a></li>
+	    <li><a href="RMSE Report.html">RMSE</a></li>
+
+    <li><a href="HWY validation vc.html">Volume/Count</a></li>
+
+
+    <li><a href="HWY validation vc Subarea.html">Volume/Count Subarea</a></li>        </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs --><style>
+     
+     
+    thead {color: black;}
+    tbody {color: black;}
+    tfoot {color: red;}
+
+    table, th, td {
+      border: 1px solid black;
+      text-align:center;
+      font-size: 12px;
+      height:30px;
+      border-collapse: collapse;
+    width: 600px;
+    }
+ td{
+          text-align:right;
+
+    }
+        td:nth-child(1) {
+          text-align:center;
+}
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      * {
+  box-sizing: border-box;
+}
+
+.box {
+  position:absolute;
+  top:55px;
+  width: 45;
+  height:100%;
+}
+.box_1 {
+  position:absolute;
+  top:630px;
+  left:40px;
+  width: 580px;
+  height:30;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+
+  <main id="main">
+
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Transit Trips Summary</h2>
+          <p></p>
+        </div>
+                 <div> <li><a href="#">Note: Walk: Walk to Bus, PNR: Park and Ride, KNR: Kiss and Ride</a></li> </div>
+
+		   <div class="row">
+ <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" id="auto" >
+
+	<table style ="width:150%">
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>County</th>
+      <th>HBW Walk</th>
+      <th>HBW PNR</th>
+      <th>HBW KNR</th>
+      <th>HBNW Walk</th>
+      <th>HBNW PNR</th>
+      <th>HBNW KNR</th>
+      <th>NHB Walk</th>
+      <th>NHB PNR</th>
+      <th>NHB KNR</th>
+      <th>Walk Total</th>
+      <th>PNR Total</th>
+      <th>KNR Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nassau</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Duval</td>
+      <td>1,992</td>
+      <td>2</td>
+      <td>27</td>
+      <td>1,355</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3,980</td>
+      <td>0</td>
+      <td>82</td>
+      <td>7,328</td>
+      <td>2</td>
+      <td>122</td>
+    </tr>
+    <tr>
+      <td>St. Johns</td>
+      <td>87</td>
+      <td>0</td>
+      <td>0</td>
+      <td>111</td>
+      <td>0</td>
+      <td>0</td>
+      <td>190</td>
+      <td>0</td>
+      <td>0</td>
+      <td>388</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Clay</td>
+      <td>12</td>
+      <td>0</td>
+      <td>0</td>
+      <td>37</td>
+      <td>0</td>
+      <td>2</td>
+      <td>116</td>
+      <td>0</td>
+      <td>17</td>
+      <td>166</td>
+      <td>0</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>Baker</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Putnam</td>
+      <td>76</td>
+      <td>0</td>
+      <td>0</td>
+      <td>172</td>
+      <td>0</td>
+      <td>0</td>
+      <td>230</td>
+      <td>0</td>
+      <td>0</td>
+      <td>479</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>External</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table></div>
+					 
+	  
+								   
+<div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-1 content" id="barchart_PANDAS" style="width:600px">
+
+      <h4 style="padding: 5px 0;color:black;font-size:20"><span>
+    </span></h4>
+		
+    <canvas id="bar-chart2" ></canvas>
+    </div> 
+
+    <script>
+
+var all2_sovp = ['7','7328','388','166','0','479'];
+var all2_hov2p=['0','2','0','0','0','0'];
+var all2_sov3p=['0','122','0','20','0','0'];
+
+new Chart(document.getElementById("bar-chart2"), {
+    type: 'bar',
+    data: {
+      labels: ["Nassau", "Duval", "St. Johns","Clay","Baker","Putnam"],
+      datasets: [
+        {
+          label: "Walk",
+          backgroundColor: "#6C8D9C",
+          data: all2_sovp
+        }, {
+          label: "PNR",
+          backgroundColor: "#f3a27c",
+          data: all2_hov2p
+        }, {
+          label: "KNR",
+          backgroundColor: "#d37995",
+          data: all2_sov3p
+        }
+      ]
+    },
+    options: {
+      scales:{
+        x: {
+            ticks: {
+                font: {
+                    size: 10,
+                }
+            }
+        },
+        y: {
+            ticks: {
+                font: {
+                    size: 10,
+                }
+            }
+        }
+      },
+      plugins:{
+        legend:{
+           position:"bottom",
+          display:true,
+          labels:{
+            font:{
+              size:8
+            }
+          }
+
+        }
+      }
+    }
+});
+
+
+ </script>
+ </section>
+
+<!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Transit Assignment by Operator</h2>
+          <p></p>
+        </div>
+
+		   <div class="row">
+ <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" id="auto" >
+
+	<table style ="width:150%">
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Operator</th>
+      <th>Passenger Trips(OP)</th>
+      <th>Pass.Mi(OP)</th>
+      <th>Pass.Hr(OP)</th>
+      <th>Passenger Trips(PK)</th>
+      <th>Pass.Mi(PK)</th>
+      <th>Pass.Hr(PK)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>JTA Local Bus</td>
+      <td>3,834</td>
+      <td>15,068</td>
+      <td>1,413</td>
+      <td>2,275</td>
+      <td>9,863</td>
+      <td>943</td>
+    </tr>
+    <tr>
+      <td>JTA express bus</td>
+      <td>340</td>
+      <td>1,625</td>
+      <td>148</td>
+      <td>318</td>
+      <td>1,827</td>
+      <td>162</td>
+    </tr>
+    <tr>
+      <td>JTA BRT Bus</td>
+      <td>395</td>
+      <td>1,686</td>
+      <td>147</td>
+      <td>225</td>
+      <td>933</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td>JTA Skyway</td>
+      <td>286</td>
+      <td>277</td>
+      <td>29</td>
+      <td>186</td>
+      <td>196</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>4,858</td>
+      <td>18,657</td>
+      <td>1,740</td>
+      <td>3,005</td>
+      <td>12,819</td>
+      <td>1,212</td>
+    </tr>
+  </tbody>
+</table></div>
+					
+									   
+<div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-1 content" id="barchart_PANDAS" style="width:600px">
+
+      <h4 style="padding: 5px 0;color:black;font-size:20"><span>
+    </span></h4>
+
+																						
+				
+    <canvas id="bar-chart3" ></canvas>
+    </div> 
+
+    <script>
+
+var all2_sovp = ['3834','340','395','286'];
+var all2_hov2p=['2275','318','225','186'];
+
+
+new Chart(document.getElementById("bar-chart3"), {
+    type: 'bar',
+    data: {
+      labels: ["JTA Local Bus", "JTA Express Bus", "JTA BRT Bus","JTA Skyway"],
+      datasets: [
+        {
+          label: "Off Peak",
+          backgroundColor: "#6C8D9C",
+          data: all2_sovp
+        }, {
+          label: "Peak",
+          backgroundColor: "#f3a27c",
+          data: all2_hov2p
+        }
+      ]
+    },
+    options: {
+      scales:{
+        x: {
+            ticks: {
+                font: {
+                    size: 10,
+                }
+            }
+        },
+        y: {
+            ticks: {
+                font: {
+                    size: 10,
+                }
+            }
+        }
+      },
+      plugins:{
+        legend:{
+           position:"bottom",
+          display:true,
+          labels:{
+            font:{
+              size:8
+            }
+          }
+
+        }
+      }
+    }
+});
+
+
+ </script>
+ 
+
+</div>
+</div>
+   
+  </main><!-- End #main -->
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

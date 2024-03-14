@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NERPM 4-Step Model</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!--chart.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+   <script src="src/leaflet.label.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0-rc"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <!--map-->
+  	<link rel="stylesheet" href="leaflet/leaflet.css">
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<link rel="stylesheet" href="leaflet/leaflet.css"/>
+	<script src="leaflet/leaflet.js"></script> 
+	<script src="js/l.control.geosearch.js"></script>
+	<script src="js/l.geosearch.provider.google.js"></script>
+    <link rel="stylesheet" href="css/l.geosearch.css"/>
+        <script src="src/leaflet.label.js"></script>
+   <script src="src/leaflet.label.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+
+    </div>
+  </section>
+
+    <!-- ======= Header ======= should be used for every html-->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+            <h1 class="logo me-auto"><a href="home.html">NERPM 4-Step Model Year 2015
+  </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="home.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="home.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="https://sites.google.com/view/nerpm/model-package-download "target=“_blank">Download</a></li>
+          <li><a class="nav-link scrollto" href="https://sites.google.com/view/nerpm" target="_blank">User Guide</a></li>
+          <li class="dropdown"><a href="#"><span>Model Result</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="ee.html"><span>External</span> </a>
+
+              </li>
+              <li class="dropdown"><a href="generation.html"><span>Trip Generation</span> </a>
+ 
+              </li>
+			   <li class="dropdown"><a href="trip length.html"><span>Trip Distribution</span> </a>
+
+              </li>
+			   <li class="dropdown"><a href="#"><span>Mode Choice</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+               
+                  <li><a href="mc_person trips.html">Person Trips</a></li>
+				  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+                </ul>
+              </li>
+			  	   <li class="dropdown"><a href="transit summary.html"><span>Transit Summary</span> </a>
+
+              </li>
+
+
+<li class="dropdown"><a href="#"><span>Highway Analysis </span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="HWY analysis.html">Volume/Capacity</a></li>
+				  <li><a href="HWY analysis_Subarea.html">Volume/Capacity Subarea</a></li>
+                </ul>
+              </li> 			  <li class="dropdown"><a href="#"><span>Highway Validation</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="RMSE Report.html">RMSE</a></li>
+                  <li><a href="HWY validation vc.html">Volume/Count </a></li>
+				  <li><a href="HWY validation vc Subarea.html">Volume/Count  Subarea</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header should be used for every html-->
+
+        <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-right">
+          <h4>Model Result</h4>
+          <ol>
+            <li><a href="ee.html">External</a></li>
+  <li><a href="generation.html">Generation</a></li>
+  <li><a href="trip length.html">Distribution</a></li>
+  <li><a href="mc_person trips.html">Person Trips</a></li>
+  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+  <li><a href="transit summary.html">Transit Summary</a></li>
+  
+<li><a href="HWY analysis.html">Volume/Capacity</a></li>
+	    <li><a href="HWY analysis_Subarea.html">Volume/Capacity Subarea</a></li>
+	    <li><a href="RMSE Report.html">RMSE</a></li>
+
+    <li><a href="HWY validation vc.html">Volume/Count</a></li>
+
+
+    <li><a href="HWY validation vc Subarea.html">Volume/Count Subarea</a></li>        </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs --><style>
+     
+     
+    thead {color: black;}
+    tbody {color: black;}
+    tfoot {color: red;}
+
+    table, th, td {
+      border: 1px solid black;
+      text-align:center;
+      font-size: 12px;
+      height:30px;
+      border-collapse: collapse;
+    width: 600px;
+    }
+
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      * {
+  box-sizing: border-box;
+}
+
+.box {
+  position:absolute;
+  top:55px;
+  width: 45;
+  height:100%;
+}
+.box_1 {
+  position:absolute;
+  top:630px;
+  left:40px;
+  width: 580px;
+  height:30;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+
+  <main id="main">
+
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>RMSE Overall</h2>
+          <p></p>
+        </div>
+		   <div class="row">
+ <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" id="auto" >
+
+	<table style ="width:150%">
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nassau</th>
+      <th>Duval</th>
+      <th>St. Johns</th>
+      <th>Clay</th>
+      <th>Baker</th>
+      <th>Putnam</th>
+      <th>Areawide</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>&lt;5k</th>
+      <td>58.99</td>
+      <td>72.84</td>
+      <td>113.79</td>
+      <td>72.62</td>
+      <td>103.84</td>
+      <td>41.50</td>
+      <td>78.85</td>
+    </tr>
+    <tr>
+      <th>5k-10k</th>
+      <td>68.39</td>
+      <td>47.22</td>
+      <td>61.30</td>
+      <td>44.38</td>
+      <td>42.27</td>
+      <td>36.86</td>
+      <td>50.02</td>
+    </tr>
+    <tr>
+      <th>10k-15k</th>
+      <td>49.18</td>
+      <td>42.05</td>
+      <td>35.42</td>
+      <td>32.15</td>
+      <td>37.57</td>
+      <td>26.01</td>
+      <td>39.65</td>
+    </tr>
+    <tr>
+      <th>15k-20k</th>
+      <td>23.22</td>
+      <td>41.19</td>
+      <td>48.37</td>
+      <td>33.27</td>
+      <td>7.83</td>
+      <td>9.64</td>
+      <td>39.43</td>
+    </tr>
+    <tr>
+      <th>20k-30k</th>
+      <td>42.39</td>
+      <td>39.50</td>
+      <td>36.73</td>
+      <td>14.60</td>
+      <td>27.88</td>
+      <td>NA</td>
+      <td>38.16</td>
+    </tr>
+    <tr>
+      <th>30k-50k</th>
+      <td>15.88</td>
+      <td>48.46</td>
+      <td>66.62</td>
+      <td>17.92</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>44.12</td>
+    </tr>
+    <tr>
+      <th>50k-60k</th>
+      <td>NA</td>
+      <td>35.00</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>35.00</td>
+    </tr>
+    <tr>
+      <th>60k+</th>
+      <td>NA</td>
+      <td>21.71</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>21.71</td>
+    </tr>
+    <tr>
+      <th>Overall</th>
+      <td>63.45</td>
+      <td>54.59</td>
+      <td>66.21</td>
+      <td>33.29</td>
+      <td>47.26</td>
+      <td>34.31</td>
+      <td>55.35</td>
+    </tr>
+  </tbody>
+</table></div>
+					 
+	  
+								   
+<div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-1 content" id="barchart_PANDAS" style="width:600px">
+
+      <h4 style="padding: 5px 0;color:black;font-size:20"><span>
+    </span></h4>
+		
+    <canvas id="myChart_2" ></canvas>
+    </div> 
+
+    <script>
+var xValues1 = ['Nassau','Duval','St. Johns','Clay','Baker','Putnam','Areawide'];
+var yValues1=['63.45','54.59','66.21','33.29','47.26','34.31','55.35'];
+
+new Chart("myChart_2", {
+  type: "bar",
+  data: {
+	labels:xValues1,
+    datasets: [{
+      data: yValues1,
+        backgroundColor:"#F39db8",
+    }]
+  },
+  bar: {
+        width: {
+            ratio: 0.5 
+        }
+        
+    },
+  options: {
+    legend: {display: false},
+    scales: {
+                    xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: false
+                            }
+                        }],
+                    yAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true,
+                            }
+                        }]
+                },
+  
+  }
+});
+
+
+ </script>
+ </section>
+
+<!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>RMSE for Subarea</h2>
+          <p></p>
+        </div>
+		   <div class="row">
+ <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" id="auto" >
+
+	<table style ="width:150%">
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Count</th>
+      <th>Volume</th>
+      <th>Number of Links</th>
+      <th>RMSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>&lt;5k</th>
+      <td>3,177,750</td>
+      <td>3,029,202</td>
+      <td>1,155</td>
+      <td>78.85</td>
+    </tr>
+    <tr>
+      <th>5k-10k</th>
+      <td>5,039,100</td>
+      <td>4,707,550</td>
+      <td>694</td>
+      <td>50.02</td>
+    </tr>
+    <tr>
+      <th>10k-15k</th>
+      <td>4,340,730</td>
+      <td>4,069,058</td>
+      <td>354</td>
+      <td>39.65</td>
+    </tr>
+    <tr>
+      <th>15k-20k</th>
+      <td>3,791,475</td>
+      <td>3,608,669</td>
+      <td>220</td>
+      <td>39.43</td>
+    </tr>
+    <tr>
+      <th>20k-30k</th>
+      <td>5,923,501</td>
+      <td>6,760,430</td>
+      <td>246</td>
+      <td>38.16</td>
+    </tr>
+    <tr>
+      <th>30k-50k</th>
+      <td>4,474,148</td>
+      <td>5,565,751</td>
+      <td>123</td>
+      <td>44.12</td>
+    </tr>
+    <tr>
+      <th>50k-60k</th>
+      <td>1,155,296</td>
+      <td>1,491,345</td>
+      <td>21</td>
+      <td>35.00</td>
+    </tr>
+    <tr>
+      <th>60k+</th>
+      <td>2,879,940</td>
+      <td>3,232,124</td>
+      <td>42</td>
+      <td>21.71</td>
+    </tr>
+    <tr>
+      <th>Overall</th>
+      <td>30,781,943</td>
+      <td>32,464,131</td>
+      <td>2,855</td>
+      <td>55.35</td>
+    </tr>
+  </tbody>
+</table> 
+
+</div>
+</div>
+   
+  </main><!-- End #main -->
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1024 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NERPM 4-Step Model
+
+  </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!--chart.js-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
+   <script src="src/leaflet.label.js"></script>
+  <!--map-->
+  	<link rel="stylesheet" href="leaflet/leaflet.css">
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<link rel="stylesheet" href="leaflet/leaflet.css"/>
+	<script src="leaflet/leaflet.js"></script> 
+	<script src="js/l.control.geosearch.js"></script>
+	<script src="js/l.geosearch.provider.google.js"></script>
+    <link rel="stylesheet" href="css/l.geosearch.css"/>
+        <script src="src/leaflet.label.js"></script>
+   <script src="src/leaflet.label.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+
+    </div>
+  </section>
+
+  <!-- ======= Header ======= should be used for every html-->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="home.html">NERPM 4-Step Model Year 2015
+  </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="home.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="home.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="https://sites.google.com/view/nerpm/model-package-download "target=“_blank">Download</a></li>
+          <li><a class="nav-link scrollto" href="https://sites.google.com/view/nerpm" target="_blank">User Guide</a></li>
+          <li class="dropdown"><a href="#"><span>Model Result</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="ee.html"><span>External</span> </a>
+
+              </li>
+              <li class="dropdown"><a href="generation.html"><span>Trip Generation</span> </a>
+ 
+              </li>
+			   <li class="dropdown"><a href="trip length.html"><span>Trip Distribution</span> </a>
+
+              </li>
+			   <li class="dropdown"><a href="#"><span>Mode Choice</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+               
+                  <li><a href="mc_person trips.html">Person Trips</a></li>
+				  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+                </ul>
+              </li>
+			  	   <li class="dropdown"><a href="transit summary.html"><span>Transit Summary</span> </a>
+
+              </li>
+
+
+<li class="dropdown"><a href="#"><span>Highway Analysis </span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="HWY analysis.html">Volume/Capacity</a></li>
+				  <li><a href="HWY analysis_Subarea.html">Volume/Capacity Subarea</a></li>
+                </ul>
+              </li> 			  <li class="dropdown"><a href="#"><span>Highway Validation</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="RMSE Report.html">RMSE</a></li>
+                  <li><a href="HWY validation vc.html">Volume/Count </a></li>
+				  <li><a href="HWY validation vc Subarea.html">Volume/Count  Subarea</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header should be used for every html-->
+
+        <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-right">
+          <h4>Model Result</h4>
+          <ol>
+            <li><a href="ee.html">External</a></li>
+  <li><a href="generation.html">Generation</a></li>
+  <li><a href="trip length.html">Distribution</a></li>
+  <li><a href="mc_person trips.html">Person Trips</a></li>
+  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+  <li><a href="transit summary.html">Transit Summary</a></li>
+  
+<li><a href="HWY analysis.html">Volume/Capacity</a></li>
+<li><a href="HWY analysis_Subarea.html">Volume/Capacity Subarea</a></li>
+	    <li><a href="RMSE Report.html">RMSE</a></li>
+
+    <li><a href="HWY validation vc.html">Volume/Count</a></li>
+
+
+    <li><a href="HWY validation vc Subarea.html">Volume/Count Subarea</a></li>        </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs --><style>
+     
+     
+    thead {color: black;}
+    tbody {color: black;}
+    tfoot {color: red;}
+
+    table, th, td {
+      border: 1px solid black;
+      text-align:center;
+      font-size: 14px;
+      height:10px;
+      border-collapse: collapse;
+    width: 300px;
+    }
+td:nth-child(1) {
+    text-align:center;
+      width:25%;
+}
+td:nth-child(2) {
+     text-align:right;
+       width:25%;
+}
+td:nth-child(3) {
+         text-align:right;
+  width:25%;
+}
+td:nth-child(4) {
+         text-align:right;
+           width:25%;
+
+}
+
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      * {
+  box-sizing: border-box;
+}
+
+.box {
+  position:absolute;
+  top:55px;
+  width: 45;
+  height:100%;
+}
+.box_1 {
+  position:absolute;
+  top:630px;
+  left:40px;
+  width: 580px;
+  height:30;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+
+  <main id="main">
+
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>EE Trips</h2>
+          <p></p>
+        </div>
+		   <div class="row">
+ <div class="col-lg-3 order-1 order-lg-1" id="auto">
+    <h4 style="padding: 10px 0;color:black;font-size:20"><span>
+    EE Drive Alone</span></h4>
+	<table style ="width:90%">
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Zone</th>
+      <th>Origins</th>
+      <th>Destinations</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2550</td>
+      <td>256</td>
+      <td>255</td>
+      <td>511</td>
+    </tr>
+    <tr>
+      <td>2551</td>
+      <td>791</td>
+      <td>692</td>
+      <td>1,483</td>
+    </tr>
+    <tr>
+      <td>2552</td>
+      <td>154</td>
+      <td>157</td>
+      <td>311</td>
+    </tr>
+    <tr>
+      <td>2553</td>
+      <td>76</td>
+      <td>71</td>
+      <td>147</td>
+    </tr>
+    <tr>
+      <td>2554</td>
+      <td>17</td>
+      <td>16</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>2555</td>
+      <td>22</td>
+      <td>21</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td>2556</td>
+      <td>7</td>
+      <td>6</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>2557</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2558</td>
+      <td>861</td>
+      <td>805</td>
+      <td>1,666</td>
+    </tr>
+    <tr>
+      <td>2559</td>
+      <td>125</td>
+      <td>113</td>
+      <td>238</td>
+    </tr>
+    <tr>
+      <td>2560</td>
+      <td>4</td>
+      <td>3</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>2561</td>
+      <td>8</td>
+      <td>7</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>2562</td>
+      <td>91</td>
+      <td>89</td>
+      <td>180</td>
+    </tr>
+    <tr>
+      <td>2563</td>
+      <td>794</td>
+      <td>929</td>
+      <td>1,723</td>
+    </tr>
+    <tr>
+      <td>2564</td>
+      <td>194</td>
+      <td>181</td>
+      <td>375</td>
+    </tr>
+    <tr>
+      <td>2565</td>
+      <td>167</td>
+      <td>140</td>
+      <td>307</td>
+    </tr>
+    <tr>
+      <td>2566</td>
+      <td>116</td>
+      <td>108</td>
+      <td>224</td>
+    </tr>
+    <tr>
+      <td>2567</td>
+      <td>843</td>
+      <td>753</td>
+      <td>1,596</td>
+    </tr>
+    <tr>
+      <td>2568</td>
+      <td>726</td>
+      <td>669</td>
+      <td>1,395</td>
+    </tr>
+    <tr>
+      <td>2569</td>
+      <td>1,268</td>
+      <td>1,147</td>
+      <td>2,415</td>
+    </tr>
+    <tr>
+      <td>2570</td>
+      <td>22</td>
+      <td>22</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td>2571</td>
+      <td>86</td>
+      <td>87</td>
+      <td>173</td>
+    </tr>
+    <tr>
+      <td>2572</td>
+      <td>193</td>
+      <td>194</td>
+      <td>387</td>
+    </tr>
+    <tr>
+      <td>2573</td>
+      <td>423</td>
+      <td>426</td>
+      <td>849</td>
+    </tr>
+    <tr>
+      <td>2574</td>
+      <td>332</td>
+      <td>335</td>
+      <td>667</td>
+    </tr>
+    <tr>
+      <td>2575</td>
+      <td>281</td>
+      <td>272</td>
+      <td>553</td>
+    </tr>
+    <tr>
+      <td>2576</td>
+      <td>1,210</td>
+      <td>1,535</td>
+      <td>2,745</td>
+    </tr>
+    <tr>
+      <td>2577</td>
+      <td>185</td>
+      <td>215</td>
+      <td>400</td>
+    </tr>
+  </tbody>
+</table></div>
+   <div class="col-lg-3 order-2 order-lg-2" id="auto">
+    <h4 style="padding: 10px 0;color:black;font-size:20"><span>
+    EE Shared Ride</span></h4>
+	<table style ="width:90%"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Zone</th>
+      <th>Origins</th>
+      <th>Destinations</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2550</td>
+      <td>150</td>
+      <td>147</td>
+      <td>297</td>
+    </tr>
+    <tr>
+      <td>2551</td>
+      <td>465</td>
+      <td>446</td>
+      <td>911</td>
+    </tr>
+    <tr>
+      <td>2552</td>
+      <td>90</td>
+      <td>88</td>
+      <td>178</td>
+    </tr>
+    <tr>
+      <td>2553</td>
+      <td>42</td>
+      <td>42</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td>2554</td>
+      <td>9</td>
+      <td>9</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>2555</td>
+      <td>12</td>
+      <td>12</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>2556</td>
+      <td>4</td>
+      <td>4</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>2557</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2558</td>
+      <td>546</td>
+      <td>527</td>
+      <td>1,073</td>
+    </tr>
+    <tr>
+      <td>2559</td>
+      <td>65</td>
+      <td>67</td>
+      <td>132</td>
+    </tr>
+    <tr>
+      <td>2560</td>
+      <td>2</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>2561</td>
+      <td>4</td>
+      <td>4</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>2562</td>
+      <td>50</td>
+      <td>51</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>2563</td>
+      <td>526</td>
+      <td>558</td>
+      <td>1,084</td>
+    </tr>
+    <tr>
+      <td>2564</td>
+      <td>114</td>
+      <td>114</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <td>2565</td>
+      <td>83</td>
+      <td>91</td>
+      <td>174</td>
+    </tr>
+    <tr>
+      <td>2566</td>
+      <td>68</td>
+      <td>70</td>
+      <td>138</td>
+    </tr>
+    <tr>
+      <td>2567</td>
+      <td>450</td>
+      <td>468</td>
+      <td>918</td>
+    </tr>
+    <tr>
+      <td>2568</td>
+      <td>400</td>
+      <td>416</td>
+      <td>816</td>
+    </tr>
+    <tr>
+      <td>2569</td>
+      <td>698</td>
+      <td>730</td>
+      <td>1,428</td>
+    </tr>
+    <tr>
+      <td>2570</td>
+      <td>12</td>
+      <td>12</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>2571</td>
+      <td>47</td>
+      <td>47</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>2572</td>
+      <td>106</td>
+      <td>106</td>
+      <td>212</td>
+    </tr>
+    <tr>
+      <td>2573</td>
+      <td>233</td>
+      <td>233</td>
+      <td>466</td>
+    </tr>
+    <tr>
+      <td>2574</td>
+      <td>183</td>
+      <td>183</td>
+      <td>366</td>
+    </tr>
+    <tr>
+      <td>2575</td>
+      <td>142</td>
+      <td>150</td>
+      <td>292</td>
+    </tr>
+    <tr>
+      <td>2576</td>
+      <td>911</td>
+      <td>872</td>
+      <td>1,783</td>
+    </tr>
+    <tr>
+      <td>2577</td>
+      <td>156</td>
+      <td>120</td>
+      <td>276</td>
+    </tr>
+  </tbody>
+</table></div>
+   <div class="col-lg-3 order-3 order-lg-3" id="auto">
+    <h4 style="padding: 10px 0;color:black;font-size:20"><span>
+    EE Light Truck</span></h4>
+	<table style ="width:90%"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Zone</th>
+      <th>Origins</th>
+      <th>Destinations</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2550</td>
+      <td>15</td>
+      <td>15</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>2551</td>
+      <td>46</td>
+      <td>63</td>
+      <td>109</td>
+    </tr>
+    <tr>
+      <td>2552</td>
+      <td>9</td>
+      <td>8</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>2553</td>
+      <td>4</td>
+      <td>5</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>2554</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>2555</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>2556</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2557</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2558</td>
+      <td>46</td>
+      <td>68</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <td>2559</td>
+      <td>6</td>
+      <td>7</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>2560</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2561</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2562</td>
+      <td>5</td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>2563</td>
+      <td>83</td>
+      <td>53</td>
+      <td>136</td>
+    </tr>
+    <tr>
+      <td>2564</td>
+      <td>11</td>
+      <td>12</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>2565</td>
+      <td>8</td>
+      <td>10</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>2566</td>
+      <td>6</td>
+      <td>7</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>2567</td>
+      <td>33</td>
+      <td>51</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td>2568</td>
+      <td>42</td>
+      <td>45</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td>2569</td>
+      <td>74</td>
+      <td>81</td>
+      <td>155</td>
+    </tr>
+    <tr>
+      <td>2570</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>2571</td>
+      <td>5</td>
+      <td>4</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>2572</td>
+      <td>11</td>
+      <td>10</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>2573</td>
+      <td>24</td>
+      <td>22</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <td>2574</td>
+      <td>19</td>
+      <td>17</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>2575</td>
+      <td>15</td>
+      <td>14</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>2576</td>
+      <td>121</td>
+      <td>83</td>
+      <td>204</td>
+    </tr>
+    <tr>
+      <td>2577</td>
+      <td>10</td>
+      <td>11</td>
+      <td>21</td>
+    </tr>
+  </tbody>
+</table></div>
+   <div class="col-lg-3 order-4 order-lg-4" id="auto">
+    <h4 style="padding: 10px 0;color:black;font-size:20"><span>
+    EE Heavy Truck</span></h4>
+	<table style ="width:90%"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Zone</th>
+      <th>Origins</th>
+      <th>Destinations</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2550</td>
+      <td>33</td>
+      <td>37</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>2551</td>
+      <td>103</td>
+      <td>203</td>
+      <td>306</td>
+    </tr>
+    <tr>
+      <td>2552</td>
+      <td>20</td>
+      <td>20</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>2553</td>
+      <td>9</td>
+      <td>13</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>2554</td>
+      <td>2</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2555</td>
+      <td>2</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2556</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2557</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2558</td>
+      <td>167</td>
+      <td>219</td>
+      <td>386</td>
+    </tr>
+    <tr>
+      <td>2559</td>
+      <td>13</td>
+      <td>21</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>2560</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2561</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2562</td>
+      <td>11</td>
+      <td>12</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>2563</td>
+      <td>276</td>
+      <td>140</td>
+      <td>416</td>
+    </tr>
+    <tr>
+      <td>2564</td>
+      <td>25</td>
+      <td>37</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <td>2565</td>
+      <td>16</td>
+      <td>32</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td>2566</td>
+      <td>15</td>
+      <td>20</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>2567</td>
+      <td>86</td>
+      <td>141</td>
+      <td>227</td>
+    </tr>
+    <tr>
+      <td>2568</td>
+      <td>87</td>
+      <td>125</td>
+      <td>212</td>
+    </tr>
+    <tr>
+      <td>2569</td>
+      <td>152</td>
+      <td>233</td>
+      <td>385</td>
+    </tr>
+    <tr>
+      <td>2570</td>
+      <td>2</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>2571</td>
+      <td>10</td>
+      <td>10</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>2572</td>
+      <td>23</td>
+      <td>22</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td>2573</td>
+      <td>50</td>
+      <td>49</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <td>2574</td>
+      <td>39</td>
+      <td>38</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <td>2575</td>
+      <td>31</td>
+      <td>32</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td>2576</td>
+      <td>451</td>
+      <td>203</td>
+      <td>654</td>
+    </tr>
+    <tr>
+      <td>2577</td>
+      <td>22</td>
+      <td>27</td>
+      <td>49</td>
+    </tr>
+  </tbody>
+</table> </div>
+ </div>
+      </div>
+   
+  </main><!-- End #main -->
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

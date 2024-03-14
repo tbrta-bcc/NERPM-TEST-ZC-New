@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NERPM 4-Step Model</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!--chart.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
+   <script src="src/leaflet.label.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.0.0/chartjs-plugin-annotation.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!--map-->
+  	<link rel="stylesheet" href="leaflet/leaflet.css">
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<link rel="stylesheet" href="leaflet/leaflet.css"/>
+	<script src="leaflet/leaflet.js"></script> 
+	<script src="js/l.control.geosearch.js"></script>
+	<script src="js/l.geosearch.provider.google.js"></script>
+    <link rel="stylesheet" href="css/l.geosearch.css"/>
+        <script src="src/leaflet.label.js"></script>
+   <script src="src/leaflet.label.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+
+    </div>
+  </section>
+
+    <!-- ======= Header ======= should be used for every html-->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+            <h1 class="logo me-auto"><a href="home.html">NERPM 4-Step Model Year 2015
+  </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="home.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="home.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="https://sites.google.com/view/nerpm/model-package-download "target=“_blank">Download</a></li>
+          <li><a class="nav-link scrollto" href="https://sites.google.com/view/nerpm" target="_blank">User Guide</a></li>
+          <li class="dropdown"><a href="#"><span>Model Result</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="ee.html"><span>External</span> </a>
+
+              </li>
+              <li class="dropdown"><a href="generation.html"><span>Trip Generation</span> </a>
+ 
+              </li>
+			   <li class="dropdown"><a href="trip length.html"><span>Trip Distribution</span> </a>
+
+              </li>
+			   <li class="dropdown"><a href="#"><span>Mode Choice</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+               
+                  <li><a href="mc_person trips.html">Person Trips</a></li>
+				  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+                </ul>
+              </li>
+			  	   <li class="dropdown"><a href="transit summary.html"><span>Transit Summary</span> </a>
+
+              </li>
+
+
+<li class="dropdown"><a href="#"><span>Highway Analysis </span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="HWY analysis.html">Volume/Capacity</a></li>
+				  <li><a href="HWY analysis_Subarea.html">Volume/Capacity Subarea</a></li>
+                </ul>
+              </li> 			  <li class="dropdown"><a href="#"><span>Highway Validation</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="RMSE Report.html">RMSE</a></li>
+                  <li><a href="HWY validation vc.html">Volume/Count </a></li>
+				  <li><a href="HWY validation vc Subarea.html">Volume/Count  Subarea</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header should be used for every html-->
+
+        <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-right">
+          <h4>Model Result</h4>
+          <ol>
+            <li><a href="ee.html">External</a></li>
+  <li><a href="generation.html">Generation</a></li>
+  <li><a href="trip length.html">Distribution</a></li>
+  <li><a href="mc_person trips.html">Person Trips</a></li>
+  <li><a href="mc_vehicle trips.html">Vehicle Trips</a></li>
+
+  <li><a href="transit summary.html">Transit Summary</a></li>
+  
+<li><a href="HWY analysis.html">Volume/Capacity</a></li>
+	    <li><a href="HWY analysis_Subarea.html">Volume/Capacity Subarea</a></li>
+	    <li><a href="RMSE Report.html">RMSE</a></li>
+
+    <li><a href="HWY validation vc.html">Volume/Count</a></li>
+
+
+    <li><a href="HWY validation vc Subarea.html">Volume/Count Subarea</a></li>        </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs --><style>
+     
+     
+    thead {color: black;}
+    tbody {color: black;}
+    tfoot {color: red;}
+
+    table, th, td {
+      border: 1px solid black;
+      text-align:center;
+      font-size: 14px;
+      height:10px;
+      border-collapse: collapse;
+    width: 1200px;
+    }
+td:nth-child(1) {
+  text-align:right
+}
+td:nth-child(2) {
+  text-align:right
+}
+td:nth-child(3) {
+  text-align:right
+}
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      * {
+  box-sizing: border-box;
+}
+
+.box {
+  position:absolute;
+  top:55px;
+  width: 45;
+  height:100%;
+}
+.box_1 {
+  position:absolute;
+  top:630px;
+  left:40px;
+  width: 580px;
+  height:30;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+
+  <main id="main">
+
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Trip Distribution Summary</h2>
+          <p></p>
+        </div>
+		   <div class="row">
+           
+ <div  id="auto">
+    <h4 style="padding: 5px 0;color:black;font-size:20"><span>
+    Trip Length Summary</span></h4>
+	<table style ="width:150%">
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Total Trips</th>
+      <th>Intrazonal Trips</th>
+      <th>Intrazonal Percentage (%)</th>
+      <th>Average Trip Length (Miles)</th>
+      <th>Average Trip Length (Mins)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>HBW-PK</th>
+      <td>946,004</td>
+      <td>5,806</td>
+      <td>0.61</td>
+      <td>16.56</td>
+      <td>29.23</td>
+    </tr>
+    <tr>
+      <th>HBW-OP</th>
+      <td>946,004</td>
+      <td>4,481</td>
+      <td>0.47</td>
+      <td>18.48</td>
+      <td>25.17</td>
+    </tr>
+    <tr>
+      <th>HBSH-OP</th>
+      <td>478,992</td>
+      <td>16,338</td>
+      <td>3.41</td>
+      <td>13.37</td>
+      <td>19.42</td>
+    </tr>
+    <tr>
+      <th>HBSR-OP</th>
+      <td>452,991</td>
+      <td>20,428</td>
+      <td>4.51</td>
+      <td>13.77</td>
+      <td>19.77</td>
+    </tr>
+    <tr>
+      <th>HBO-OP</th>
+      <td>1,063,751</td>
+      <td>17,950</td>
+      <td>1.69</td>
+      <td>14.03</td>
+      <td>20.23</td>
+    </tr>
+    <tr>
+      <th>NHB-OP</th>
+      <td>1,051,048</td>
+      <td>54,750</td>
+      <td>5.21</td>
+      <td>11.79</td>
+      <td>17.92</td>
+    </tr>
+    <tr>
+      <th>LTRK-OP</th>
+      <td>288,413</td>
+      <td>19,619</td>
+      <td>6.80</td>
+      <td>10.27</td>
+      <td>16.35</td>
+    </tr>
+    <tr>
+      <th>MTRK-OP</th>
+      <td>79,517</td>
+      <td>5,261</td>
+      <td>6.62</td>
+      <td>10.45</td>
+      <td>16.45</td>
+    </tr>
+    <tr>
+      <th>HTRK-OP</th>
+      <td>28,953</td>
+      <td>1,860</td>
+      <td>6.42</td>
+      <td>10.52</td>
+      <td>16.50</td>
+    </tr>
+    <tr>
+      <th>SOIE-OP</th>
+      <td>74,230</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>43.67</td>
+      <td>49.93</td>
+    </tr>
+    <tr>
+      <th>HOIE-OP</th>
+      <td>52,671</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>42.19</td>
+      <td>46.90</td>
+    </tr>
+    <tr>
+      <th>LDIE-OP</th>
+      <td>3,240</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>44.13</td>
+      <td>50.72</td>
+    </tr>
+    <tr>
+      <th>HDIE-OP</th>
+      <td>13,869</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>38.78</td>
+      <td>42.13</td>
+    </tr>
+  </tbody>
+</table></div>
+    		<div class="space" id="auto">
+	<h4 style="padding: 0px 0;color:black;font-size:20"><span>
+      &nbsp &nbsp   </span></h4>
+	</div>
+  
+<div class="groupbar" id="barchart_PANDAS">
+    <canvas id="trip-length-mile" style="width:100%;max-width:1200px;height=200px"></canvas>
+    </div>
+    		<div class="space" id="auto">
+	<h4 style="padding: 0px 0;color:black;font-size:20"><span>
+      &nbsp &nbsp   </span></h4>
+	</div>
+
+<div class="groupbar" id="barchart_PANDAS">
+    <canvas id="trip-length-mins" style="width:100%;max-width:1200px;height=200px"></canvas>
+    </div>
+    		<div class="space" id="auto">
+	<h4 style="padding: 0px 0;color:black;font-size:20"><span>
+      &nbsp &nbsp   </span></h4>
+	</div>
+
+<div class="groupbar" id="barchart_PANDAS">
+    <canvas id="trip-length-total" style="width:100%;max-width:1200px;height=200px"></canvas>
+    </div>
+    		<div class="space" id="auto">
+	<h4 style="padding: 0px 0;color:black;font-size:20"><span>
+      &nbsp &nbsp   </span></h4>
+	</div>
+<script>
+
+var yValues=['16.56','18.48','13.37','13.77','14.03','11.79','10.27','10.45','10.52','43.67','42.19','44.13','38.78'];
+
+new Chart(document.getElementById("trip-length-mile"), {
+    type: 'bar',
+    data: {
+      labels: ['HBW-PK','HBW-OP','HBSH-OP','HBSR-OP','HBO-OP','NHB-OP','LTRK-OP','MTRK-OP','HTRK-OP','SOIE-OP','HOIE-OP','LDIE-OP','HDIE-OP'],
+      datasets: [
+     {
+          label: "Miles",
+          backgroundColor: "#F3A27C",
+          data: yValues
+        }
+      ]
+    },
+    options: {
+                         scales: {
+                    y: [{
+                            display: true,
+                            ticks: {
+          
+                                max: 1200000
+                            }
+                        }]
+                },
+         plugins:{
+      title: {
+        display: true,
+        text: 'Average Trip Length (Miles)',
+        font:{
+          size:25
+        }
+      }
+    },
+
+
+    
+    }
+});
+
+</script>
+
+<script>
+
+var yValues=['946004','946004','478992','452991','1063751','1051048','288413','79517','28953','74230','52671','3240','13869'];
+
+new Chart(document.getElementById("trip-length-total"), {
+    type: 'bar',
+    data: {
+      labels: ['HBW','HBSH','HBSR','HBO','NHB','LTRK','MTRK','HTRK','SOIE','HOIE','LDIE','HDIE'],
+      datasets: [
+     {
+          label: "total trips",
+          backgroundColor: "#F3A27C",
+          data: yValues
+        }
+      ]
+    },
+    options: {
+                         scales: {
+                    y: [{
+                            display: true,
+                            ticks: {
+          
+                                max: 1200000
+                            }
+                        }]
+                },
+         plugins:{
+      title: {
+        display: true,
+        text: 'Total Trips',
+        font:{
+          size:25
+        }
+      }
+    },
+
+
+    
+    }
+});
+
+</script>
+
+
+<script>
+
+var yValues=['29.23','25.17','19.42','19.77','20.23','17.92','16.35','16.45','16.5','49.93','46.9','50.72','42.13'];
+
+new Chart(document.getElementById("trip-length-mins"), {
+    type: 'bar',
+    data: {
+      labels: ['HBW','HBSH','HBSR','HBO','NHB','LTRK','MTRK','HTRK','SOIE','HOIE','LDIE','HDIE'],
+      datasets: [
+     {
+          label: "Mins",
+          backgroundColor: "#F3A27F",
+          data: yValues
+        }
+      ]
+    },
+    options: {
+                         scales: {
+                    y: [{
+                            display: true,
+                            ticks: {
+          
+                                max: 1200000
+                            }
+                        }]
+                },
+         plugins:{
+      title: {
+        display: true,
+        text: 'Average Trip Length (Mins)',
+        font:{
+          size:25
+        }
+      }
+    },
+
+
+    
+    }
+});
+
+</script>
+
+ </div>
+      </div>
+   
+  </main><!-- End #main -->
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
